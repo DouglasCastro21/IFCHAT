@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "992645650627",
+    "firebase_url": "https://ifchat-feb1d.firebaseio.com",
+    "project_id": "ifchat-feb1d",
+    "storage_bucket": "ifchat-feb1d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:992645650627:android:1fc7e74aa402741b",
+        "android_client_info": {
+          "package_name": "ifchat.douglas.com.ifchat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "992645650627-hi8h6v6kr1re1lhj5280992c8edfl2l9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "ifchat.douglas.com.ifchat",
+            "certificate_hash": "fb43d46ee4c4f930441837df53553fbd6fe49be4"
+          }
+        },
+        {
+          "client_id": "992645650627-22e8mqcfsut1uob1dlbaau94ss1hmgde.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBqJcw5RMbb7qLZvz7GIyX1zB54H9Qiw1Y"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "992645650627-22e8mqcfsut1uob1dlbaau94ss1hmgde.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
