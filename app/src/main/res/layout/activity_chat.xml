@@ -43,8 +43,8 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
-        android:id="@+id/imageButton"
-        android:layout_width="29dp"
+        android:id="@+id/toolbar1ButtonID"
+        android:layout_width="31dp"
         android:layout_height="70dp"
         android:layout_marginLeft="8dp"
         android:layout_marginStart="8dp"
@@ -54,5 +54,18 @@
         app:layout_constraintStart_toEndOf="@+id/toolbar2"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_more_vert" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="37dp"
+        android:layout_height="36dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toStartOf="@+id/toolbar1ButtonID"
+        app:layout_constraintHorizontal_bias="0.914"
+        app:layout_constraintStart_toEndOf="@+id/textView5"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_action_users" />
 
 </android.support.constraint.ConstraintLayout>
