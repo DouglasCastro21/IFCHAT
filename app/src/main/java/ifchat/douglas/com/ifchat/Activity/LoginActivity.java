@@ -16,6 +16,7 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
 import ifchat.douglas.com.ifchat.DAO.Configuracao_Firebase;
+import ifchat.douglas.com.ifchat.Entidades.ChatActivity;
 import ifchat.douglas.com.ifchat.Entidades.Usuarios;
 import ifchat.douglas.com.ifchat.R;
 
@@ -117,11 +118,8 @@ public class LoginActivity extends AppCompatActivity {
 
     public void abrirTElaPrincipal(){
 
-       // Intent intent = new Intent(getActivity(), AreaUsuario.class);
-       // startActivity(intent);
-
-        Toast.makeText(LoginActivity.this, "voce fez login", Toast.LENGTH_SHORT).show();
-
+        Intent intent = new Intent(this,ChatActivity.class);
+       startActivity(intent);
 
     }
 

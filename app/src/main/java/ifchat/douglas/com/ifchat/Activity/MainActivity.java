@@ -5,13 +5,14 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import ifchat.douglas.com.ifchat.R;
 
 public class MainActivity extends AppCompatActivity {
 
     private Button buttonLogin;
-    private Button buttonCadastro;
+    private TextView buttonCadastro;
 
 
 
@@ -22,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         buttonLogin = (Button) findViewById(R.id.buttonLoginID);
-        buttonCadastro = (Button) findViewById(R.id.buttonCadastrarUsuarioID);
+        buttonCadastro = (TextView) findViewById(R.id.buttonCadastrarUsuarioID);
 
         buttonLogin.setOnClickListener(new View.OnClickListener() {
             @Override

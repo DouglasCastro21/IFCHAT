@@ -11,32 +11,16 @@
         android:id="@+id/buttonLoginID"
         android:layout_width="324dp"
         android:layout_height="56dp"
-        android:layout_marginBottom="9dp"
+        android:layout_marginBottom="15dp"
         android:layout_marginEnd="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
-        android:layout_marginStart="8dp"
 
+        android:layout_marginStart="8dp"
         android:background="@drawable/background_interno"
         android:drawableLeft="@drawable/ic_action_process_startt"
         android:text="Login"
         app:layout_constraintBottom_toTopOf="@+id/buttonCadastrarUsuarioID"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/buttonCadastrarUsuarioID"
-        android:layout_width="324dp"
-        android:layout_height="56dp"
-        android:layout_marginBottom="64dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginStart="8dp"
-        android:background="@drawable/background_interno"
-        android:drawableLeft="@drawable/ic_person_add"
-        android:text="Cadastrar"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -52,8 +36,10 @@
         android:layout_marginTop="38dp"
         app:layout_constraintBottom_toTopOf="@+id/buttonLoginID"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.125"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.233"
         app:srcCompat="@drawable/ifnmg" />
 
     <TextView
@@ -64,7 +50,7 @@
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="264dp"
+        android:layout_marginTop="240dp"
         android:text="Chat"
         android:textAllCaps="false"
         android:textAppearance="@style/TextAppearance.AppCompat.Button"
@@ -76,5 +62,21 @@
         app:layout_constraintHorizontal_bias="0.914"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/buttonCadastrarUsuarioID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="62dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:text="Não tem Conta ? Cadastre-se"
+        android:textColor="@color/common_google_signin_btn_text_dark_focused"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </android.support.constraint.ConstraintLayout>

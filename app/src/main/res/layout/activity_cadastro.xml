@@ -22,7 +22,26 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.308" />
+        app:layout_constraintVertical_bias="0.111" />
+
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="254dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:background="@android:drawable/editbox_background_normal"
+        android:ems="10"
+        android:hint="Nome"
+        android:drawableLeft="@drawable/ic_action_user"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewCampusID" />
 
     <EditText
         android:id="@+id/EmailtextID"
@@ -32,7 +51,7 @@
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="12dp"
         android:background="@android:drawable/editbox_background_normal"
         android:drawableLeft="@drawable/ic_action_gmail"
         android:ems="10"
@@ -40,7 +59,7 @@
         android:inputType="textEmailAddress"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+        app:layout_constraintTop_toBottomOf="@+id/editText" />
 
     <EditText
         android:id="@+id/confirmarEmailID"
@@ -50,7 +69,7 @@
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         android:background="@android:drawable/editbox_background_normal"
         android:drawableLeft="@drawable/ic_action_gmail"
         android:ems="10"
@@ -68,7 +87,7 @@
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         android:background="@android:drawable/editbox_background_normal"
         android:drawableLeft="@drawable/ic_action_key"
         android:ems="10"
@@ -87,7 +106,7 @@
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         android:background="@android:drawable/editbox_background_normal"
         android:drawableLeft="@drawable/ic_action_key"
         android:ems="10"
@@ -103,7 +122,7 @@
         android:id="@+id/buttonCadastrarUsuarioID"
         android:layout_width="204dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="42dp"
+        android:layout_marginBottom="32dp"
         android:layout_marginEnd="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
@@ -123,9 +142,9 @@
         android:layout_marginLeft="30dp"
         android:layout_marginRight="8dp"
         android:layout_marginStart="30dp"
-        android:layout_marginTop="52dp"
+        android:layout_marginTop="36dp"
         app:layout_constraintEnd_toEndOf="@+id/spinnerID"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.996"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_expand_more" />
@@ -138,7 +157,7 @@
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="11dp"
+        android:layout_marginTop="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/spinnerID"
@@ -190,4 +209,6 @@
         app:layout_constraintHorizontal_bias="0.534"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/progressBarCdastroID" />
+
+
 </android.support.constraint.ConstraintLayout>
