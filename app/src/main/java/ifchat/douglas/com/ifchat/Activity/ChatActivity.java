@@ -23,6 +23,7 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
+import ifchat.douglas.com.ifchat.Adapter.AdapterMensagem;
 import ifchat.douglas.com.ifchat.DAO.Configuracao_Firebase;
 import ifchat.douglas.com.ifchat.Fragmentos.JanuariaFragment;
 import ifchat.douglas.com.ifchat.Helper.Preferencias;
@@ -40,11 +41,12 @@ public class ChatActivity extends AppCompatActivity {
     private EditText editMensagem;
     private ImageButton btnEnviar;
     private ListView listView;
-    private ArrayList<String> mensagens;
-    private ArrayAdapter adapter;
+    private ArrayList<Mensagem> mensagens;
+    private ArrayAdapter<Mensagem> adapter;
     private ValueEventListener valueEventListenerMensagens;
 
     private String idUsuarioRemetente;
+    private String getIdUsuarioDestinatario;
 
 
 
@@ -83,16 +85,14 @@ public class ChatActivity extends AppCompatActivity {
        idUsuarioRemetente = preferencias.getIdentificador();
 
 
+
        // Montar o lista de Mensagens
 
         mensagens = new ArrayList<>();
-        adapter = new ArrayAdapter(
-
-                ChatActivity.this,
-                android.R.layout.activity_list_item,mensagens
 
 
-        );
+
+        adapter = new AdapterMensagem(ChatActivity.this,mensagens);
 
         listView.setAdapter(adapter);
 
@@ -117,7 +117,7 @@ public class ChatActivity extends AppCompatActivity {
 
                 Mensagem mensagem = dados.getValue(Mensagem.class);
 
-                mensagens.add(mensagem.getMensagem());
+                mensagens.add(mensagem);
 
 
                 }
@@ -162,7 +162,7 @@ public class ChatActivity extends AppCompatActivity {
 
 
                 salvarMensagens(idUsuarioRemetente,mensagem);
-
+                salvarMensagens("Destinario",mensagem);
 
             }
 
