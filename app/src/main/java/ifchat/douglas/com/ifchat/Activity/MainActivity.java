@@ -12,7 +12,6 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.FirebaseDatabase;
 
 import ifchat.douglas.com.ifchat.DAO.Configuracao_Firebase;
-import ifchat.douglas.com.ifchat.Entidades.ChatActivity;
 import ifchat.douglas.com.ifchat.R;
 
 public class MainActivity extends AppCompatActivity {

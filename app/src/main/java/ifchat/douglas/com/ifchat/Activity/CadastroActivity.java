@@ -27,7 +27,6 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.storage.StorageReference;
 
 import ifchat.douglas.com.ifchat.DAO.Configuracao_Firebase;
-import ifchat.douglas.com.ifchat.Entidades.ChatActivity;
 import ifchat.douglas.com.ifchat.Entidades.Usuarios;
 import ifchat.douglas.com.ifchat.Helper.Base64Custom;
 import ifchat.douglas.com.ifchat.Helper.Preferencias;

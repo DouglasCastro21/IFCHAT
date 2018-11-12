@@ -4,14 +4,81 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Entidades.ChatActivity">
+    tools:context=".Activity.ChatActivity">
+
+
+
+
+
+
+
+    <RelativeLayout
+        android:id="@+id/containerFragmentID"
+        android:layout_width="match_parent"
+        android:layout_height="508dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5"
+        app:layout_constraintVertical_bias="1.0">
+
+        <ListView
+            android:id="@+id/listViewConversasID"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/linearMensagemID"
+            android:padding="8dp" />
+
+
+        <LinearLayout
+            android:id="@+id/linearMensagemID"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="12dp"
+            android:background="@android:color/white"
+            android:orientation="horizontal"
+
+            >
+
+
+            <EditText
+                android:id="@+id/caixaMensagemID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@android:drawable/editbox_background"
+                android:hint="Digite aqui ..."
+                android:textColor="@android:color/black"
+                android:textColorHint="@android:color/black"
+
+                />
+
+            <ImageButton
+                android:id="@+id/btnEnviarMensagem"
+                android:layout_width="38dp"
+                android:layout_height="46dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="16dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:srcCompat="@drawable/ic_send" />
+        </LinearLayout>
+
+
+    </RelativeLayout>
 
 
     <android.support.v7.widget.Toolbar
-        android:id="@+id/toolbar2"
-        android:layout_width="0dp"
-        android:layout_height="72dp"
 
+        android:id="@+id/toolbar3"
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
         android:background="@drawable/fundocadastro"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
@@ -19,53 +86,30 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+
+
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="62dp"
-        android:layout_height="73dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/toolbar2"
+        android:layout_width="46dp"
+        android:layout_height="58dp"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ifnmg" />
+
 
     <TextView
         android:id="@+id/textView5"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="44dp"
-        android:layout_marginStart="44dp"
-        android:layout_marginTop="44dp"
-        android:text="Campus Januária"
+        android:layout_height="23dp"
+        android:layout_marginLeft="36dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="32dp"
+        android:text="Campus Montes Claros"
         android:textColor="@color/common_google_signin_btn_text_dark_focused"
-        android:textSize="18sp"
+        android:textSize="16sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageButton
-        android:id="@+id/toolbar1ButtonID"
-        android:layout_width="31dp"
-        android:layout_height="70dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginStart="8dp"
-        android:background="@android:color/transparent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/toolbar2"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_more_vert" />
-
-    <ImageView
-        android:id="@+id/imageView5"
-        android:layout_width="37dp"
-        android:layout_height="36dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
-        app:layout_constraintEnd_toStartOf="@+id/toolbar1ButtonID"
-        app:layout_constraintHorizontal_bias="0.914"
-        app:layout_constraintStart_toEndOf="@+id/textView5"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_action_users" />
 
 </android.support.constraint.ConstraintLayout>

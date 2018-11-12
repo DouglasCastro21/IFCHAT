@@ -16,7 +16,6 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
 import ifchat.douglas.com.ifchat.DAO.Configuracao_Firebase;
-import ifchat.douglas.com.ifchat.Entidades.ChatActivity;
 import ifchat.douglas.com.ifchat.Entidades.Usuarios;
 import ifchat.douglas.com.ifchat.R;
 
