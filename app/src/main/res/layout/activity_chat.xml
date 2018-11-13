@@ -7,15 +7,10 @@
     tools:context=".Activity.ChatActivity">
 
 
-
-
-
-
-
     <RelativeLayout
         android:id="@+id/containerFragmentID"
         android:layout_width="match_parent"
-        android:layout_height="508dp"
+        android:layout_height="560dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -25,9 +20,11 @@
 
         <ListView
             android:id="@+id/listViewConversasID"
+            style="@style/Widget.AppCompat.Light.ListView.DropDown"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_above="@+id/linearMensagemID"
+            android:background="@android:color/background_light"
             android:padding="8dp" />
 
 
@@ -58,7 +55,7 @@
             <ImageButton
                 android:id="@+id/btnEnviarMensagem"
                 android:layout_width="38dp"
-                android:layout_height="46dp"
+                android:layout_height="36dp"
                 android:layout_alignParentBottom="true"
                 android:layout_marginBottom="16dp"
                 android:layout_marginEnd="8dp"

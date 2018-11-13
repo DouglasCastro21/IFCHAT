@@ -46,7 +46,7 @@ public class ChatActivity extends AppCompatActivity {
     private ValueEventListener valueEventListenerMensagens;
 
     private String idUsuarioRemetente;
-    private String getIdUsuarioDestinatario;
+
 
 
 
