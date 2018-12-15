@@ -26,7 +26,7 @@
 
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/nomeUsuarioID"
         android:layout_width="254dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
@@ -59,7 +59,7 @@
         android:inputType="textEmailAddress"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText" />
+        app:layout_constraintTop_toBottomOf="@+id/nomeUsuarioID" />
 
     <EditText
         android:id="@+id/confirmarEmailID"
@@ -80,7 +80,7 @@
         app:layout_constraintTop_toBottomOf="@+id/EmailtextID" />
 
     <EditText
-        android:id="@+id/confirmarSenhaID"
+        android:id="@+id/SenhaID"
         android:layout_width="254dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
@@ -98,7 +98,7 @@
         app:layout_constraintTop_toBottomOf="@+id/confirmarEmailID" />
 
     <EditText
-        android:id="@+id/editText6"
+        android:id="@+id/confirmarSenhaID"
         android:layout_width="254dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="4dp"
@@ -115,7 +115,7 @@
         app:layout_constraintBottom_toTopOf="@+id/buttonCadastrarUsuarioID"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/confirmarSenhaID"
+        app:layout_constraintTop_toBottomOf="@+id/SenhaID"
         app:layout_constraintVertical_bias="0.0" />
 
     <Button

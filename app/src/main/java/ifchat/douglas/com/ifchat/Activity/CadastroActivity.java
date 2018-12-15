@@ -27,7 +27,8 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.storage.StorageReference;
 
 import ifchat.douglas.com.ifchat.DAO.Configuracao_Firebase;
-import ifchat.douglas.com.ifchat.Entidades.Usuarios;
+import ifchat.douglas.com.ifchat.Model.Mensagem;
+import ifchat.douglas.com.ifchat.Model.Usuarios;
 import ifchat.douglas.com.ifchat.Helper.Base64Custom;
 import ifchat.douglas.com.ifchat.Helper.Preferencias;
 import ifchat.douglas.com.ifchat.R;
@@ -42,7 +43,7 @@ public class CadastroActivity extends AppCompatActivity {
 
 
 
-
+    private EditText  nome;
     private EditText  email;
     private EditText  confirmaremail;
     private EditText  senha;
@@ -58,7 +59,6 @@ public class CadastroActivity extends AppCompatActivity {
 
     private FirebaseAuth autenticacao;
     private StorageReference storageReference;
-    private DatabaseReference databaseReference;
 
 
 
@@ -69,7 +69,7 @@ public class CadastroActivity extends AppCompatActivity {
 
         elementos();
 
-
+      Mensagem mensagem  =  new Mensagem();
 
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -227,9 +227,11 @@ public class CadastroActivity extends AppCompatActivity {
         spinner.setAdapter(arrayAdapter);
         txtcampus = (TextView) findViewById(R.id.textViewCampusID);
 
+
+        nome = (EditText)findViewById(R.id.nomeUsuarioID);
         email = (EditText)findViewById(R.id.EmailtextID);
         confirmaremail = (EditText)findViewById(R.id.confirmarEmailID);
-        senha = (EditText)findViewById(R.id.confirmarSenhaID);
+        senha = (EditText)findViewById(R.id.SenhaID);
         confirmarsenha = (EditText)findViewById(R.id.confirmarSenhaID);
         botaocadastrar = (Button) findViewById(R.id.buttonCadastrarUsuarioID);
 
@@ -246,6 +248,7 @@ public class CadastroActivity extends AppCompatActivity {
 
         usuarios = new Usuarios();
 
+        usuarios.setNome(nome.getText().toString());
         usuarios.setEmail(email.getText().toString());
         usuarios.setSenha(senha.getText().toString());
 
@@ -277,8 +280,12 @@ public class CadastroActivity extends AppCompatActivity {
                     Toast.makeText(CadastroActivity.this,"Usuário cadastrado com sucesso!",Toast.LENGTH_LONG).show();
 
                     String identificadorUsuario = Base64Custom.codificarBase64(usuarios.getEmail());
+
+
                     FirebaseUser usuarioFirebase = task.getResult().getUser();
                     usuarios.setIdUsuario(identificadorUsuario);
+
+
                     usuarios.Salvar();
 
                     Preferencias preferencias = new Preferencias(CadastroActivity.this);
@@ -290,6 +297,7 @@ public class CadastroActivity extends AppCompatActivity {
 
                 }else{
                     progressBar.setVisibility(View.GONE);
+                    criando.setVisibility(View.GONE);
                     String erroExcecao = "";
 
                     try {
@@ -334,6 +342,8 @@ public class CadastroActivity extends AppCompatActivity {
 
 
     }
+
+
 
 
 

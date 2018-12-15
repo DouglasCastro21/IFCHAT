@@ -4,10 +4,10 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-public class Configuracao_Firebase {
+public final class Configuracao_Firebase {
 
     private  static DatabaseReference referenciaFirebase;
-    private static FirebaseAuth autenticacao;
+    private  static FirebaseAuth autenticacao;
     private  static FirebaseDatabase firebaseDatabase;
 
 
@@ -51,11 +51,11 @@ public class Configuracao_Firebase {
 
     public static FirebaseAuth getFirebaseAutenticacao(){
 
-        if (autenticacao ==null){
+        if (autenticacao == null){
 
             autenticacao = FirebaseAuth.getInstance();
         }
-        return autenticacao;
+            return autenticacao;
     }
 
 }

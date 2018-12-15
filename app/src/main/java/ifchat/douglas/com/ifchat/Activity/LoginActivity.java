@@ -16,7 +16,7 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
 import ifchat.douglas.com.ifchat.DAO.Configuracao_Firebase;
-import ifchat.douglas.com.ifchat.Entidades.Usuarios;
+import ifchat.douglas.com.ifchat.Model.Usuarios;
 import ifchat.douglas.com.ifchat.R;
 
 public class LoginActivity extends AppCompatActivity {
@@ -24,7 +24,6 @@ public class LoginActivity extends AppCompatActivity {
 
     private FirebaseAuth autenticacao;
     private Usuarios usuarios;
-   // private Entrar.SectionsPagerAdapter entrar;
     private ProgressBar progressBar;
     private TextView carregando;
 
@@ -58,6 +57,7 @@ public class LoginActivity extends AppCompatActivity {
 
 
                     usuarios = new Usuarios();
+
                     usuarios.setEmail(edtEmail.getText().toString());
                     usuarios.setSenha(edtSenha.getText().toString());
 
@@ -86,7 +86,11 @@ public class LoginActivity extends AppCompatActivity {
     private void validarLogin(){
 
         autenticacao = Configuracao_Firebase.getFirebaseAutenticacao();
-        autenticacao.signInWithEmailAndPassword(usuarios.getEmail(),usuarios.getSenha()).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+        autenticacao.signInWithEmailAndPassword(
+                usuarios.getEmail(),
+                usuarios.getSenha()
+
+        ).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
 
@@ -117,8 +121,9 @@ public class LoginActivity extends AppCompatActivity {
 
     public void abrirTElaPrincipal(){
 
+
         Intent intent = new Intent(this,ChatActivity.class);
-       startActivity(intent);
+        startActivity(intent);
 
     }
 

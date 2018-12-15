@@ -30,13 +30,15 @@ private ArrayList<Mensagem> mensagens;
     }
 
 
+
+
     @NonNull
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
 
         View view = null;
 
-      // verifica se a lista foi prrenchida
+      // verifica se a lista foi preenchida
         if (mensagens !=null){
 
 
@@ -60,11 +62,13 @@ private ArrayList<Mensagem> mensagens;
 
             }else{
 
+
                 view = inflater.inflate(R.layout.item_mensagem_esquerda,parent,false);
 
 
 
             }
+
 
 
 

@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Base64;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -26,6 +27,7 @@ import java.util.ArrayList;
 import ifchat.douglas.com.ifchat.Adapter.AdapterMensagem;
 import ifchat.douglas.com.ifchat.DAO.Configuracao_Firebase;
 import ifchat.douglas.com.ifchat.Fragmentos.JanuariaFragment;
+import ifchat.douglas.com.ifchat.Helper.Base64Custom;
 import ifchat.douglas.com.ifchat.Helper.Preferencias;
 import ifchat.douglas.com.ifchat.Model.Mensagem;
 import ifchat.douglas.com.ifchat.R;
@@ -46,6 +48,7 @@ public class ChatActivity extends AppCompatActivity {
     private ValueEventListener valueEventListenerMensagens;
 
     private String idUsuarioRemetente;
+    private String idUsuarioDestino;
 
 
 
@@ -79,19 +82,24 @@ public class ChatActivity extends AppCompatActivity {
 
         usuarioFirebase = Configuracao_Firebase.getFirebaseAutenticacao();
 
-        // recuperar dados do usuario logado
-        Preferencias preferencias = new Preferencias(ChatActivity.this);
 
-       idUsuarioRemetente = preferencias.getIdentificador();
+
+
+        // recuperar dados do usuario logado
+
+         Preferencias preferencias = new Preferencias(ChatActivity.this);
+         idUsuarioRemetente = preferencias.getIdentificador();
+
+
+
+
+
 
 
 
        // Montar o lista de Mensagens
 
         mensagens = new ArrayList<>();
-
-
-
         adapter = new AdapterMensagem(ChatActivity.this,mensagens);
 
         listView.setAdapter(adapter);
@@ -99,7 +107,10 @@ public class ChatActivity extends AppCompatActivity {
         //recuperar mensagens do Firebase
 
 
-        firebase = Configuracao_Firebase.getFirebase().child("Mensagens").child(idUsuarioRemetente);
+        firebase = Configuracao_Firebase.getFirebase()
+                .child("Mensagens")
+                .child(idUsuarioRemetente)
+                .child("cDj9T4bXTBWHv8li5EwdMY7CVmU2");
 
 
          // Criar listenner para mensagens
@@ -161,8 +172,10 @@ public class ChatActivity extends AppCompatActivity {
                 mensagem.setMensagem(textoMensagem);
 
 
-                salvarMensagens(idUsuarioRemetente,mensagem);
-                salvarMensagens("Destinario",mensagem);
+                salvarMensagens(idUsuarioRemetente,"cDj9T4bXTBWHv8li5EwdMY7CVmU2",mensagem);
+                 salvarMensagens("cDj9T4bXTBWHv8li5EwdMY7CVmU2",idUsuarioRemetente,mensagem);
+
+                editMensagem.setText("");
 
             }
 
@@ -257,13 +270,19 @@ public class ChatActivity extends AppCompatActivity {
 
 
 
-    private boolean salvarMensagens(String idRemetente, Mensagem mensagem){
+    private boolean salvarMensagens(String idRemetente,String idDestinatario, Mensagem mensagem){
 
+        idDestinatario = "cDj9T4bXTBWHv8li5EwdMY7CVmU2";
 
         try {
 
+
             firebase = Configuracao_Firebase.getFirebase().child("Mensagens");
-            firebase.child(idRemetente).push().setValue(mensagem);
+            firebase.child(idRemetente)
+                    .child(idDestinatario)
+                    .push()
+                    .setValue(mensagem);
+
 
             return true;
         }catch (Exception e){

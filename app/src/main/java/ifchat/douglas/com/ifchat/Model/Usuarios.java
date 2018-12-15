@@ -1,4 +1,4 @@
-package ifchat.douglas.com.ifchat.Entidades;
+package ifchat.douglas.com.ifchat.Model;
 
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.Exclude;
@@ -12,6 +12,7 @@ public class Usuarios {
 
 
     private String idUsuario;
+    private String nome;
     private String email;
     private String senha;
 
@@ -35,6 +36,7 @@ public class Usuarios {
         HashMap<String , Object> hashMapUsuario = new HashMap<>();
 
         hashMapUsuario.put("id",getIdUsuario());
+        hashMapUsuario.put("nome",getNome());
         hashMapUsuario.put("email",getEmail());
         hashMapUsuario.put("senha",getSenha());
 
@@ -45,8 +47,13 @@ public class Usuarios {
     }
 
 
+    public String getNome() {
+        return nome;
+    }
 
-
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
 
     public String getIdUsuario() {
         return idUsuario;
